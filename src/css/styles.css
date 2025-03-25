@@ -1,0 +1,136 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f3f3;
+  color: #212121;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+/* #region 1-timer */
+.container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  text-align: center;
+
+  flex-grow: 1; /* Робить інпут розтяжним */
+  max-width: 70%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  white-space: nowrap;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  text-align: center;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px; /* Відступ між інпутом і кнопкою */
+  justify-content: center; /* Вирівнюємо по центру */
+  align-items: baseline; /* Вирівнюємо по вертикалі */
+}
+/* #endregion */
+
+/* #region 1-snackbar */
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+legend {
+  text-align: left;
+}
+
+fieldset label {
+  align-items: baseline;
+  flex-direction: row;
+}
+/* #endregion */
